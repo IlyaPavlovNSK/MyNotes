@@ -1,0 +1,11 @@
+package com.pavlovnsk.notes.data;
+
+import androidx.room.Database;
+import androidx.room.RoomDatabase;
+
+import com.pavlovnsk.notes.model.Note;
+
+@Database(entities = {Note.class}, version = 1, exportSchema = false)
+public abstract class NoteDatabase extends RoomDatabase {
+    public abstract NoteDao getNoteDao();
+}
